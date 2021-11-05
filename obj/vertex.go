@@ -16,7 +16,7 @@ type Vertex struct {
 }
 
 func parseVertex(items []string) (v Vertex, err error) {
-	if len(items) != 3 {
+	if len(items) < 3 {
 		err = errors.New("item length is incorrect")
 		return
 	}

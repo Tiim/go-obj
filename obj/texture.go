@@ -30,7 +30,7 @@ func parseTextCoord(items []string) (vt TextureCoord, err error) {
 		err = errors.New("unable to parse V coordinate")
 		return
 	}
-	if len(items) == 3 {
+	if len(items) >= 3 {
 		if vt.W, err = strconv.ParseFloat(items[2], 64); err != nil {
 			err = errors.New("unable to parse W coordinate")
 			return
